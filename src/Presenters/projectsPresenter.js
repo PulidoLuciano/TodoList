@@ -22,6 +22,7 @@ const ProjectsPresenter = (() => {
 
     const AddTask = (title, description, dueDate) => {
         _repository.projectList[actualProject].AddTask(new Task(title, description, dueDate));
+        DrawPage();
     }
 
     const ChangeActualProject = (pos) => {

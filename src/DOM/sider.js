@@ -37,6 +37,7 @@ export default function sider(projects){
     let buttonNewProject = document.createElement("button");
     buttonNewProject.classList.add("sider-button");
     buttonNewProject.innerHTML = `<span class="material-symbols-outlined">add</span> Add project`;
+    buttonNewProject.onclick = clickNewProjectHandler;
     divSider.appendChild(buttonNewProject);
     
     return divSider;
@@ -44,4 +45,12 @@ export default function sider(projects){
 
 function clickProjectHandler(e){
     ProjectsPresenter.ChangeActualProject(e.target.name);
+}
+
+function clickNewProjectHandler(e){
+    let title = prompt("Enter the title for your new Project!");
+
+    if(title != null && title != "" && title != "Inbox" && title != "Today"){
+        ProjectsPresenter.AddProject(title);
+    }
 }

@@ -3,6 +3,9 @@
     --sider-color-hover: #ff1111;
     --sider-font-color: #ffffff;
     --task-height: 40px;
+    --add-task-color: #44ff44;
+    --add-task-hover: #11ff11;
+    --task-color-hover: #eeeeee;
 }
 
 *{
@@ -68,26 +71,74 @@
 
 h1{
     font-size: 3rem;
-    width: 100%;
-    margin-bottom: 5px;
+}
+
+.project-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 175px;
+    height: 45px;
 }
 
 #add-task-button{
-    background-color: #ffffff;
-    color: #555555;
-    height: var(--task-height);
-    text-align: left;
-    border: none;
-    padding: 3px;
-    cursor: pointer;
+    background-color: var(--add-task-color);
+}
+
+#delete-project-button{
+    background-color: var(--sider-color);
 }
 
 #add-task-button:hover{
-    color: #000000;
-    background-color: #eeeeee;
+    background-color: var(--add-task-hover);
+}
+
+#delete-project-button:hover{
+    background-color: var(--sider-color-hover);
 }
 
 button{
     display: flex;
     align-items: center;
 }
+
+#project-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+#project-buttons{
+    display: flex;
+    gap: 15px;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px;
+    align-items: center;
+    border-bottom: 1px solid #aaaaaa;
+}
+
+.task:hover{
+    background-color: var(--task-color-hover);
+}
+
+.task-description{
+    color: #aaaaaa;
+    font-size: 0.75rem;
+}
+
+.task-info{
+    display: flex;
+    gap: 10px;
+    justify-content: left;
+    align-items:center;
+}
+
